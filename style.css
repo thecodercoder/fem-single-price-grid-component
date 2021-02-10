@@ -1,0 +1,154 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Karla', sans-serif;
+  line-height: 1.3;
+  background-color: var(--ltgray);
+  color: var(--grayblue);
+  padding: var(--paddingX);
+}
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --cyan: hsl(179, 62%, 40%);
+  --ltcyan: hsl(179, 62%, 45%);
+  --yellow: hsl(71, 73%, 54%);
+  --dkyellow: hsl(71, 73%, 48%);
+  --ltgray: hsl(204, 43%, 93%);
+  --grayblue: hsl(218, 22%, 67%);
+  --paddingX: 1.8rem;
+  --paddingY: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3 {  
+  font-weight: bold;
+  margin-top: 0;
+  line-height: 1.15;
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+}
+
+p {
+  margin-top: 0;
+}
+
+.price {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  max-width: 40rem;
+  margin: auto;
+}
+
+@media only screen and (min-width: 62.5em){
+
+  .price {    
+    display: grid;    
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }  
+
+  .community {
+    grid-column: 1 / 3;
+  }
+}
+
+.price > * {
+  padding: var(--paddingX) var(--paddingY);
+}
+
+.community {
+  background-color: var(--white);  
+}
+
+.community h2 {
+  color: var(--cyan);
+}
+
+.community .subtitle {    
+  font-size: 1rem;
+  color: var(--yellow);
+  font-weight: bold;  
+  margin-bottom: 1rem;
+}
+
+.community p {
+  font-size: 0.85rem;  
+  line-height: 1.75;
+  margin-bottom: 0;
+}
+
+.subscription, .why {
+  color: var(--ltgray);
+}
+
+.subscription {
+  background-color: var(--cyan);  
+}
+
+.subscription__price {  
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.subscription__price span {
+  font-size: 1rem;
+  margin-left: 0.8rem;
+  font-weight: normal;
+  opacity: 0.75;
+}
+
+.subscription p {
+  font-size: 0.9rem;
+  margin-bottom: 1.75rem;
+}
+
+.subscription a {
+  display: block;
+  background-color: var(--yellow);
+  color: var(--white);
+  padding: 0.75rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15); 
+  transition: background-color 200ms ease;
+}
+
+.subscription a:hover {
+  background-color: var(--dkyellow);  
+}
+
+.why {
+  background-color: var(--ltcyan);
+}
+
+.why ul {
+  margin-top: 0;
+  padding: 0;
+}
+
+.why ul li {
+  list-style-type: none;
+  font-size: 0.85rem;
+  margin-bottom: 0.2rem;
+}
